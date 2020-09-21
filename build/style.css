@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+body {
+  margin: 0; }
+
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -ms-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  letter-spacing: 1px;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700; }
+
+.accordion:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px; }
+
+.active:after {
+  content: "\2212"; }
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform max-height 0.2s ease-out;
+  transition: -ms-transform max-height 0.2s ease-out;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  border-bottom: solid 1px; }
+  .panel .content {
+    padding: 10px 20px;
+    font-size: 13px; }
+
+.content {
+  margin: auto;
+  width: auto;
+  padding-top: 20px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  font-size: 13px;
+  color: grey; }
+
+.line {
+  width: 50px;
+  margin: 15px auto;
+  margin-bottom: 0;
+  height: 1px;
+  background-color: black; }
+
+.container {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; }
+
+.thread-count {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 36px;
+  text-align: center;
+  padding: 0px 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 100; }
+  .thread-count div {
+    width: 70px; }
+  .thread-count .desc {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+    margin-top: -10px; }
+
+@media (max-width: 767px) {
+  .accordion {
+    color: black !important; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative; }
+  .bg {
+    left: 400px;
+    top: 0;
+    height: 35px;
+    width: 150px;
+    background-color: black;
+    width: 150px;
+    position: absolute;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out; }
+  button.accordion {
+    width: 150px;
+    border: 1px solid black;
+    line-height: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+    background: none;
+    color: black; }
+  .accordion.first {
+    left: 100px; }
+  .accordion.second {
+    left: 250px; }
+  .accordion.third {
+    left: 400px; }
+  .panel {
+    max-height: -webkit-max-content !important;
+    max-height: -moz-max-content !important;
+    max-height: max-content !important;
+    border: none;
+    position: absolute;
+    -webkit-transition: left .3s ease-in;
+    -o-transition: left .3s ease-in;
+    transition: left .3s ease-in;
+    top: 50px;
+    width: 650px; }
+  button.accordion.active {
+    color: white; }
+  .accordion:after {
+    content: '';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px; }
+  .subcontainer {
+    width: 650px;
+    position: relative;
+    overflow-x: hidden;
+    height: 300px; }
+  .container {
+    width: 100%;
+    padding: 100px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .content {
+    width: 100%; }
+  .thread-count {
+    font-size: 50px;
+    margin: 30px auto;
+    padding: 0 15%; }
+  .thread-count {
+    padding: 0 150px;
+    margin: 0 auto; }
+  .first + .panel {
+    left: -650px; }
+  .second + .panel {
+    left: -650px; }
+  .third + .panel {
+    left: 0px; } }
